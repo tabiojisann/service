@@ -31,7 +31,7 @@
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
         <button class="dropdown-item" type="button"
-                onclick="location.href=''">
+                onclick="location.href='{{ route("users.show", ["name" => Auth::user()->name]) }}'">
           マイページ
         </button>
         <div class="dropdown-divider"></div>
@@ -40,7 +40,7 @@
         </button>
       </div>
     </li>
-    <form id="logout-button" method="POST" action="{{ route('logout') }}"> {{--この行を編集--}}
+    <form id="logout-button" method="POST" action="{{ route('logout') }}"> 
       @csrf 
     </form>
     <!-- Dropdown -->
