@@ -236,3 +236,5 @@ For more info contact <a href = "mailto: support@laradock.io">support@laradock.i
 ## License
 
 [MIT License](https://github.com/laradock/laradock/blob/master/LICENSE)
+
+common
