@@ -26,4 +26,5 @@
     </div>
     @endforeach
   </div>
+  {{ $themes->links() }}
 @endsection
