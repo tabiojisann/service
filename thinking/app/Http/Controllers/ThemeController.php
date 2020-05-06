@@ -11,10 +11,10 @@ class ThemeController extends Controller
 {
     public function index() {
 
-        $themes = Theme::all()->sortByDesc('created_at')->paginate(3);
+        $themes = Theme::all()->sortByDesc('created_at');
         // dd($themes);
 
 
-        return view('themes.index', ['themes' => $themes, 'users' => $users]);
+        return view('themes.index', ['themes' => $themes]);
         }
 }
