@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
+// Route::get('/', function () {
+//     return view('test');
+// });
+
+Route::get('/', 'TestController@index');

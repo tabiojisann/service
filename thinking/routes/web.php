@@ -15,3 +15,4 @@ Auth::routes();
 Route::get('/', 'ThemeController@index')->name('themes.index');
 Route::resource('/themes', 'ThemeController')->except('index, show')->middleware('auth');
 Route::resource('/themes', 'ThemeController')->only(['show']);
+

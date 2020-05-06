@@ -32,6 +32,7 @@ class ThemeRequest extends FormRequest
     {
         return [
             'body' => '本文',
+            'image' => '画像'
         ];
     }
 }
