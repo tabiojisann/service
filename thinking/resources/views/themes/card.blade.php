@@ -55,10 +55,10 @@
   </div>
   <div class="card-body pt-0">
     
-    <div class="card-text">
+    <!-- <div class="card-text"> -->
       <h3>
-      {{ $theme->body }}
+      {!! nl2br(e($theme->body)) !!}
       </h3>
-    </div>
+    <!-- </div> -->
   </div>
 </div>
