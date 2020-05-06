@@ -10,5 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+App::setLocale('ja');
+Auth::routes();
 Route::get('/', 'ThemeController@index')->name('themes.index');
