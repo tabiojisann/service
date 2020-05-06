@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function () {
-    return view('test');
-});
+Route::get('/', 'ThemeController@index')->name('themes.index');
