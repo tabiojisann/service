@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestDbTable extends Migration
+class CreateImagesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateTestDbTable extends Migration
      */
     public function up()
     {
-        Schema::create('test_db', function (Blueprint $table) {
+        Schema::create('images', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateTestDbTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test_db');
+        Schema::dropIfExists('images');
     }
 }

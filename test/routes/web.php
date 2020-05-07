@@ -15,4 +15,5 @@
 //     return view('test');
 // });
 
-Route::get('/', 'TestController@index');
+
+Route::get('/', 'ImageController@index');
