@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use \App\Theme;
 use \App\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ThemeRequest;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class ThemeController extends Controller
@@ -32,7 +34,13 @@ class ThemeController extends Controller
 
     public function store(ThemeRequest $request, Theme $theme) 
     {
+        
+
         $theme->fill($request->all());
+
+        $file_name = $request->image->getClientOriginalName();
+
+        $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
         $theme->user_id = $request->user()->id;
         $theme->save();
         return redirect()->route('themes.index'); 
@@ -45,18 +53,24 @@ class ThemeController extends Controller
 
     public function update(ThemeRequest $request, Theme $theme)
     {
-        $theme->fill($request->all())->save();
+        $theme->fill($request->all());
+        $file_name = $request->image->getClientOriginalName();
+        $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
+        
+        $theme->save();
         return redirect()->route('themes.index');
     }
 
     public function destroy(Theme $theme)
     {
         $theme->delete();
+        Storage::delete($theme->image);
         return redirect()->route('themes.index');
     }
 
     public function show(Theme $theme)
     {
+       
         return view('themes.show', ['theme' => $theme]);
     }
 

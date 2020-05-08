@@ -1,6 +1,6 @@
 <div class="card mt-3">
   <div class="card-body d-flex flex-row">
-    <i class="fas fa-user-circle fa-3x mr-1"></i>
+    <i class="fas fa-user-circle fa-3x mr-1 " ></i>
     <div>
       <div class="font-weight-bold">{{ $theme->user->name }}</div>
       <div class="font-weight-lighter">{{ $theme->created_at->format('Y/m/d H:i') }}</div>
@@ -53,16 +53,18 @@
     @endif
 
   </div>
-  <div class="card-body pt-0">
+  <a href="{{ route('themes.show', ['theme' => $theme]) }}">
+    <div class="card-body pt-0">
+      
+      <div class="card-text">
+        <h3>
+        {!! nl2br(e($theme->body)) !!}
+        </h3>
+      </div>
     
-    <div class="card-text">
-      <h3>
-      {!! nl2br(e($theme->body)) !!}
-      </h3>
     </div>
-   
-  </div>
-  <div class="card-image pt-0">
-    {{ $theme->image }}
-  </div>
+    <div class="card-image pt-0">
+      <img src ="{{ str_replace('public/', 'storage/', $theme->image) }}">
+    </div>
+  </a>
 </div>
