@@ -11,11 +11,20 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('test');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//投稿フォームページ
+Route::get('/post', 'PostController@showCreateForm')->name('posts.create');
+Route::post('/post', 'PostController@create')->name('posts.create');
+
+//投稿確認ページ
+// Route::get('/post/{post}', 'PostController@detail')->name('posts.detail');
 
 
-Route::get('/', 'ImageController@index');
-Route::post('image/upload', 'ImageController@upload')->name('upload');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
 
