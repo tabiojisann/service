@@ -59,4 +59,6 @@ class ThemeController extends Controller
     {
         return view('themes.show', ['theme' => $theme]);
     }
+
+    
 }

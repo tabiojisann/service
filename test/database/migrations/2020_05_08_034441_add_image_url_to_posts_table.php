@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTestDbTable extends Migration
+class AddImageUrlToPostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class CreateTestDbTable extends Migration
      */
     public function up()
     {
-        Schema::create('test_db', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+        Schema::table('posts', function (Blueprint $table) {
+            $table->string('image_url');
         });
     }
 
@@ -26,6 +25,8 @@ class CreateTestDbTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('test_db');
+        Schema::table('posts', function (Blueprint $table) {
+            $table->dropColumn('image_url'); 
+        });
     }
 }
