@@ -18,7 +18,7 @@
            </div>
 
            <div class="form-image_url"> <br>
-            <input type="file" name="image_url">
+            <input type="file" name="image_url" multiple="multiple">
            </div>
    
            <div class="form-content"><br>

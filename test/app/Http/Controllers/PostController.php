@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Post;
+use App\Image;
 use Carbon\Carbon;
 
 
@@ -17,14 +18,23 @@ class PostController extends Controller
    public function create(Request $request, Post $post)
    {
     
+      
+       
+
+        
+
        $post = new Post();
-    
+
+       $file_name = $request->image_url->getClientOriginalName();
+
        $post->title = $request->title;
        $post->content = $request->content;
-       $post->image_url = $request->image_url->storeAs('public/post_images', isset($time).'_' .Auth::user()->id . '.jpg');
+       $post->image_url = $request->image_url->storeAs('public/post_images', isset($time).'_' .Auth::user()->id . $file_name);
        $post->user_id = Auth::user()->id;
 
        $post->save();
+
+      
 
     return redirect()->route('posts.create');
    }
