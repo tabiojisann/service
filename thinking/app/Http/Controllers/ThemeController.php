@@ -61,7 +61,7 @@ class ThemeController extends Controller
         return redirect()->route('themes.index');
     }
 
-    public function destroy(Theme $theme)
+    public function destroy(ThemeRequest $request, Theme $theme)
     {
         $theme->delete();
         Storage::delete($theme->image);
@@ -70,7 +70,7 @@ class ThemeController extends Controller
 
     public function show(Theme $theme)
     {
-       
+    
         return view('themes.show', ['theme' => $theme]);
     }
 
