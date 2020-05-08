@@ -12,7 +12,7 @@
           <div class="card-body pt-0">
             @include('error_card_list')
             <div class="card-text">
-              <form method="POST" action="{{ route('themes.update', ['theme' => $theme]) }}">
+              <form method="POST" action="{{ route('themes.update', ['theme' => $theme]) }}" enctype="multipart/form-data">
                 @method('PATCH')
                 @include('themes.form')
                 <button type="submit" class="btn blue-gradient btn-block">更新する</button>
