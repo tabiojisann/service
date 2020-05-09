@@ -37,10 +37,12 @@ class ThemeController extends Controller
         
 
         $theme->fill($request->all());
+        
+        if (isset($theme->image)) {
+            $file_name = $request->image->getClientOriginalName();
+            $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
+        } 
 
-        $file_name = $request->image->getClientOriginalName();
-
-        $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
         $theme->user_id = $request->user()->id;
         $theme->save();
         return redirect()->route('themes.index'); 
@@ -61,10 +63,10 @@ class ThemeController extends Controller
         return redirect()->route('themes.index');
     }
 
-    public function destroy(ThemeRequest $request, Theme $theme)
+    public function destroy(Theme $theme)
     {
         $theme->delete();
-        Storage::delete($theme->image);
+        Storage::Delete($theme->image);
         return redirect()->route('themes.index');
     }
 

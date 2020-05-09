@@ -9,7 +9,7 @@
 </div>
 <div class="form-group">
   <label>画像（任意）</label>
-  <input id="file" type="file" name="image"  class="form-control" value="{{ $theme->body ?? old('body') }}">
+  <input id="file" type="file" name="image"  class="form-control" value="on">
 </div>
 
  
