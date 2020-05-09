@@ -8,4 +8,4 @@ UI/UX を完全に度外視で動作だけを見る。
 
 ## こんな感じ
 
-## <img src="https://gyazo.com/c34175de3cb3687d85361eaab2a564aa">
+https://gyazo.com/c34175de3cb3687d85361eaab2a564aa
