@@ -1,6 +1,6 @@
 
   <div class="card-body d-flex flex-row">
-    <i class="fas fa-user-circle fa-3x mr-1 " ></i>
+    <i class="fas fa-user-circle fa-2x mr-1 " ></i>
     <div>
       <div class="font-weight-bold">{{ $theme->user->name }}</div>
       <div class="font-weight-lighter">{{ $theme->created_at->format('Y/m/d H:i') }}</div>
