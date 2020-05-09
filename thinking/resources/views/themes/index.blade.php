@@ -11,7 +11,7 @@
           @include('themes.card')
             <div class="card-image pt-0">
               <img src ="{{ str_replace('public/', 'storage/', $theme->image) }}">
-            </div>
+            </div><br>
         </a>
       </div>
       @endforeach
