@@ -1,10 +1,10 @@
 
   <div class="card-body d-flex flex-row">
-    <i class="fas fa-user-circle fa-3x mr-1 " ></i>
-    <div>
-      <div class="font-weight-bold">{{ $theme->user->name }}</div>
-      <div class="font-weight-lighter">{{ $theme->created_at->format('Y/m/d H:i') }}</div>
-    </div>
+    <i class="fas fa-user-circle fa-2x mr-1 " ></i>
+  <div>
+    <div class="font-weight-bold">{{ $theme->user->name }}</div>
+    <div class="font-weight-lighter">{{ $theme->created_at->format('Y/m/d H:i') }}</div>
+  </div>
 
   @if( Auth::id() === $theme->user_id )
     <!-- dropdown -->
@@ -55,8 +55,8 @@
   </div>
   <a href="{{ route('themes.show', ['theme' => $theme]) }}">
     <div class="card-body pt-0">
-      <div class="card-text">
-        <h3>
+      <div class="card-text ">
+        <h3 class="font-weight-bold brack">
         {!! nl2br(e($theme->body)) !!}
         </h3>
       </div>

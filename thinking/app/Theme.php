@@ -17,4 +17,9 @@ class Theme extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function answer(): hasMany
+    {
+        return $this->hasMany('App\Answer');
+    }
 }

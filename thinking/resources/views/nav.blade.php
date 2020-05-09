@@ -15,6 +15,12 @@
       <a class="nav-link" href="{{ route('login') }}">ログイン</a>
     </li>
     @endguest 
+
+    @auth 
+    <li class="nav-item">
+      <a class="nav-link" href="/">{{ Auth::user()->name }}</a>
+    </li>
+    @endauth 
       
     @auth 
     <li class="nav-item">

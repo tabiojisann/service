@@ -9,5 +9,13 @@
       <div class="card-image pt-0">
         <img src ="{{ str_replace('public/', '/storage/', $theme->image) }}">
       </div>
+
+      @foreach((array)$theme->answers as $answer)
+        <div class="font-weight-bold">{{ $answer->body }}</div>
+      @endforeach
   </div>
+
+  
+  
+
 @endsection

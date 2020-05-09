@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use \App\Theme;
 use \App\User;
+use \App\Answer;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ThemeRequest;
@@ -22,6 +23,7 @@ class ThemeController extends Controller
 
         $themes = Theme::all()->sortByDesc('created_at');
         // dd($themes);
+        
 
 
         return view('themes.index', ['themes' => $themes]);
@@ -70,10 +72,11 @@ class ThemeController extends Controller
         return redirect()->route('themes.index');
     }
 
-    public function show(Theme $theme)
+    public function show(Theme $theme, Answer $answer)
     {
-    
-        return view('themes.show', ['theme' => $theme]);
+        
+
+        return view('themes.show', ['theme' => $theme, 'answer' => $answer]);
     }
 
     
