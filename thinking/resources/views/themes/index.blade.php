@@ -6,11 +6,11 @@
   <div class="container">
     @include('nav')
       @foreach($themes as $theme)
-      <div class="card mt-5 ">
+      <div class="card mt-5 w-75 mx-auto" style="width: 200px;">
         
           @include('themes.card')
-            <div class="card-image pt-0 mx-auto" style="width: 200px;">
-              <img src ="{{ str_replace('public/', 'storage/', $theme->image) }}">
+            <div class="card-image pt-0">
+              <img src ="{{ str_replace('public/', 'storage/', $theme->image) }}"style="height: 100%; width: 100%;">
             </div>
         </a>
       </div>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use \App\Theme;
 use \App\User;
+use \InterventionImage;
+use Intervention\Image\ImageManager;
+use Intervention\Image\Facades\Image;
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ThemeRequest;
@@ -37,16 +41,22 @@ class ThemeController extends Controller
         
 
         $theme->fill($request->all());
+      
         
+      
         if (isset($theme->image)) {
             $file_name = $request->image->getClientOriginalName();
             $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
-        } 
-
+          }
+           
         $theme->user_id = $request->user()->id;
         $theme->save();
         return redirect()->route('themes.index'); 
-    }
+            
+    } 
+
+       
+    
 
     public function edit(Theme $theme)
     {
