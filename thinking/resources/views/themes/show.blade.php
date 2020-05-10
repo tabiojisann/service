@@ -6,7 +6,6 @@
   @include('nav')
   <div class="card mt-5 w-50 mx-auto" style="width: 200px;">
     @include('themes.card')
-
   
     <!-- 画像データが入力されてたら表示する。なかったらしない -->
     @isset($theme->image)
@@ -22,6 +21,7 @@
     </a>
     @endif
   </div>
+ 
   
   @foreach($theme->answers as $answer)
   <div class="card mt-5 w-50 mx-auto" style="width: 200px;">
@@ -36,8 +36,7 @@
     </div>
   </div>
   @endforeach
-
+</div>
   
   
-
 @endsection

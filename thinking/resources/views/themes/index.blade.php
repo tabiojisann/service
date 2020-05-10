@@ -17,7 +17,7 @@
             </div>
           @endisset
 
-        </a>
+        
       </div>
       @endforeach
      
