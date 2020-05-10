@@ -6,8 +6,9 @@
   <div class="container">
     @include('nav')
       @foreach($themes as $theme)
+
       <div class="card mt-5 w-50  mx-auto" style="width: 200px;">
-        
+      
           @include('themes.card')
           
           @isset($theme->image)
@@ -16,8 +17,9 @@
             </div>
           @endisset
 
-        </a>
+        
       </div>
       @endforeach
+     
   </div>
 @endsection

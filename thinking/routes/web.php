@@ -26,6 +26,15 @@ Route::prefix('register')->name('register.')->group(function () {
 
 
 Route::get('/', 'ThemeController@index')->name('themes.index');
-Route::resource('/themes', 'ThemeController')->except('index, show')->middleware('auth');
+Route::resource('/themes', 'ThemeController')->except('index', 'show')->middleware('auth');
 Route::resource('/themes', 'ThemeController')->only(['show']);
+
+// Route::resource('/{themes}/answers', 'AnswerController')->except('index', 'show' ,'edit' ,'update')->middleware('auth');
+Route::resource('/{themes}/answers', 'AnswerController', [
+    'only' => ['create', 'store', 'destroy']
+])->middleware('auth');
+
+
+
+
 

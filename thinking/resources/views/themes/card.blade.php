@@ -1,6 +1,11 @@
 
   <div class="card-body d-flex flex-row">
-    <i class="fas fa-user-circle fa-2x mr-1 " ></i>
+  
+  @if( Auth::id() === $theme->user_id )
+    <i class="fab fa-phoenix-framework fa-2x mr-1"></i>
+  @elseif( Auth::id() !== $theme->user_id )
+    <i class="far fa-grin-squint-tears fa-2x mr-1"></i>
+  @endif
     <div>
       <div class="font-weight-bold">{{ $theme->user->name }}</div>
       <div class="font-weight-lighter">{{ $theme->created_at->format('Y/m/d H:i') }}</div>
@@ -14,12 +19,16 @@
             <i class="fas fa-ellipsis-v"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="{{ route("themes.edit", ['theme' => $theme]) }}">
-              <i class="fas fa-pen mr-1"></i>記事を更新する
+            <a class="dropdown-item" href="{{ route('themes.show', ['theme' => $theme]) }}">
+              <i class="fas fa-list mr-2"></i>回答一覧
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ route('themes.edit', ['theme' => $theme]) }}">
+              <i class="fas fa-pen mr-1"></i>お題を更新する
             </a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item text-danger" data-toggle="modal" data-target="#modal-delete-{{ $theme->id }}">
-              <i class="fas fa-trash-alt mr-1"></i>記事を削除する
+              <i class="fas fa-trash-alt mr-1"></i>お題を削除する
             </a>
           </div>
         </div>
@@ -50,15 +59,31 @@
         </div>
       </div>
       <!-- modal -->
-    @endif
+  
+    @elseif( Auth::id() !== $theme->user_id )
+    <div class="ml-auto card-text">
+        <div class="dropdown">
+          <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-ellipsis-v"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="{{ route('themes.show', ['theme' => $theme]) }}">
+              <i class="fas fa-list mr-2"></i>回答一覧
+            </a>
+          </div>
+       
+        </div>
+    </div> 
+    @endif   
 
   </div>
-  <a href="{{ route('themes.show', ['theme' => $theme]) }}">
-    <div class="card-body pt-0 ">
-      <div class="card-text mx-auto" style="width: 100%;">
-        <h1 class="font-weight-bold" style="color: black;">
-        {!! nl2br(e($theme->body)) !!}
-        </h1>
-      </div>
+
+
+  <div class="card-body pt-0 ">
+    <div class="card-text mx-auto" style="width: 100%;">
+      <h1 class="font-weight-bold" style="color: black;">
+      {!! nl2br(e($theme->body)) !!}
+      </h1>
     </div>
+  </div>
 

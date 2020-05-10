@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use \App\Theme;
 use \App\User;
-use \InterventionImage;
-use Intervention\Image\ImageManager;
-use Intervention\Image\Facades\Image;
+
+use \App\Answer;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,10 +21,12 @@ class ThemeController extends Controller
         $this->authorizeResource(Theme::class, 'theme');
     }
 
-    public function index() {
+    public function index(User $user) {
 
         $themes = Theme::all()->sortByDesc('created_at');
+      
         // dd($themes);
+        
 
 
         return view('themes.index', ['themes' => $themes]);
@@ -80,10 +81,16 @@ class ThemeController extends Controller
         return redirect()->route('themes.index');
     }
 
-    public function show(Theme $theme)
+    public function show(Theme $theme, Answer $answer, User $user)
     {
-    
-        return view('themes.show', ['theme' => $theme]);
+
+       
+        // $answers = Answer::where($theme)->orderBy('created_at', 'desc');
+        $answers = Answer::all()->sortByDesc('created_at');
+      
+         
+
+        return view('themes.show', ['theme' => $theme, 'answers' => $answers]);
     }
 
     
