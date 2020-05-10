@@ -24,6 +24,7 @@
 チームでの開発を意識してプルリクやissueを積極的に活用しました。
 
 https://github.com/tabiojisann/service/issues/35
+https://github.com/tabiojisann/service/issues/28
 
 
 
