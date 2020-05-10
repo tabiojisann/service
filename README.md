@@ -1,4 +1,4 @@
-## 戻る
+## このページにきてしまったら下記のURLで戻ってください
 https://github.com/tabiojisann/service/tree/master/thinking
 
 
