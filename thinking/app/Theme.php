@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\hasMany;
 
 class Theme extends Model
 {
@@ -18,7 +19,7 @@ class Theme extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function answer(): hasMany
+    public function answers(): hasMany
     {
         return $this->hasMany('App\Answer');
     }

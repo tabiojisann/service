@@ -21,9 +21,10 @@ class ThemeController extends Controller
         $this->authorizeResource(Theme::class, 'theme');
     }
 
-    public function index() {
+    public function index(User $user) {
 
         $themes = Theme::all()->sortByDesc('created_at');
+      
         // dd($themes);
         
 
@@ -82,9 +83,10 @@ class ThemeController extends Controller
 
     public function show(Theme $theme, Answer $answer)
     {
-        
+        // $answers = Answer::where($theme)->orderBy('created_at', 'desc');
+        $answers = Answer::all()->sortByDesc('created_at');
 
-        return view('themes.show', ['theme' => $theme, 'answer' => $answer]);
+        return view('themes.show', ['theme' => $theme, 'answers' => $answers]);
     }
 
     

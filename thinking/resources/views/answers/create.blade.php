@@ -15,9 +15,11 @@
               <form method="POST" action="{{ route('answers.store') }}" enctype="multipart/form-data">
                 @csrf
                   <div class="form-group">
-                    <label>答える</label>
+                    <label>回答</label>
                     <textarea name="body" required class="form-control" rows="5" placeholder=面白い答えを待ってます></textarea>
                   </div>
+                  <input type="hidden" name="user_id" value="{{ Auth::id }}">
+                  <input type="hidden" name="theme_id" value="{{ theme_id }}">
                 <button type="submit" class="btn blue-gradient btn-block">回答を出す</button>
               </form>
             </div>
