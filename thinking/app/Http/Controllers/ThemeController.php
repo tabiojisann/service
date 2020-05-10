@@ -67,8 +67,12 @@ class ThemeController extends Controller
     public function update(ThemeRequest $request, Theme $theme)
     {
         $theme->fill($request->all());
-        $file_name = $request->image->getClientOriginalName();
-        $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
+
+        if (isset($theme->image)) {
+            $file_name = $request->image->getClientOriginalName();
+            $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
+        }
+        
         
         $theme->save();
         return redirect()->route('themes.index');
