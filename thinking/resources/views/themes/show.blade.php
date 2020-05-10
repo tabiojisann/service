@@ -14,7 +14,7 @@
       </div>
     @endisset
 
-    <!-- 投稿者本人がコメントできないように -->
+    <!-- 投稿者本人と未ログインユーザーがコメントできないように -->
     @if( Auth::id() !== $theme->user_id )
     <a href="{{ route('answers.create', $theme) }}">
       <button type="button" class="btn btn-success">回答</button>
