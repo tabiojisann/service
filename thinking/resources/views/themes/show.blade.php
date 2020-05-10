@@ -4,10 +4,10 @@
 
 @section('content')
   @include('nav')
-  <div class="card mt-3">
+  <div class="card mt-5 w-75 mx-auto" style="width: 200px;">
     @include('themes.card')
       <div class="card-image pt-0">
-        <img src ="{{ str_replace('public/', '/storage/', $theme->image) }}">
+        <img src ="{{ str_replace('public/', '/storage/', $theme->image) }}" style="height: 100%; width: 100%;">
       </div>
 
       @foreach((array)$theme->answers as $answer)
