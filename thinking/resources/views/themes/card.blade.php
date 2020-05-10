@@ -55,10 +55,10 @@
   </div>
   <a href="{{ route('themes.show', ['theme' => $theme]) }}">
     <div class="card-body pt-0 ">
-      <div class="card-text mx-auto" style="width: 200px;">
-        <h3>
+      <div class="card-text mx-auto" style="width: 100%;">
+        <h1 class="font-weight-bold" style="color: black;">
         {!! nl2br(e($theme->body)) !!}
-        </h3>
+        </h1>
       </div>
     </div>
 
