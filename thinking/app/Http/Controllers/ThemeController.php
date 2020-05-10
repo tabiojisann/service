@@ -81,10 +81,14 @@ class ThemeController extends Controller
         return redirect()->route('themes.index');
     }
 
-    public function show(Theme $theme, Answer $answer)
+    public function show(Theme $theme, Answer $answer, User $user)
     {
+
+       
         // $answers = Answer::where($theme)->orderBy('created_at', 'desc');
         $answers = Answer::all()->sortByDesc('created_at');
+      
+         
 
         return view('themes.show', ['theme' => $theme, 'answers' => $answers]);
     }

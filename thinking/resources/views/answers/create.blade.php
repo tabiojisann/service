@@ -12,7 +12,7 @@
           <div class="card-body pt-0">
             @include('error_card_list')
             <div class="card-text">
-              <form method="POST" action="{{ route('answers.store') }}" enctype="multipart/form-data">
+              <form method="POST" action="{{ route('answers.store', $theme) }}" enctype="multipart/form-data">
                 @csrf
                   <div class="form-group">
                     <label>回答</label>

@@ -7,12 +7,20 @@ use App\Answer;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AnswerRequest;
+use App\Http\Requests\ThemeRequest;
 
 class AnswerController extends Controller
 {
 
-  public function create(Theme $theme, Answer $answer)
+  public function create(Request $request, Theme $theme, Answer $answer)
   {
+
+  
+  
+
+
+
+
       return view('answers.create', ['theme' => $theme, 'answer' => $answer]);    
   }
 
