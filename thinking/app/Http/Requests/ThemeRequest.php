@@ -25,6 +25,7 @@ class ThemeRequest extends FormRequest
     {
         return [
             'body' => 'required|max:150',
+            'image' => 'max:2000'
         ];
     }
 

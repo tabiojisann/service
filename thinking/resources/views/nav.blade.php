@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-dark blue-gradient">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Memo</a>
+  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Top</a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -15,12 +15,22 @@
       <a class="nav-link" href="{{ route('login') }}">ログイン</a>
     </li>
     @endguest 
+
+    @auth 
+    <li class="nav-item mx-auto" style="width: 400px;">
+      <a class="nav-link" style="font-size: 19px;" href="/">{{ Auth::user()->name }}</a>
+    </li>
+    @endauth 
       
     @auth 
     <li class="nav-item">
       <a class="nav-link" href="{{ route('themes.create') }}"><i class="fas fa-pen mr-1"></i>お題を出す</a>
     </li>
     @endauth 
+
+    
+    
+    
     
     @auth
     <!-- Dropdown -->
