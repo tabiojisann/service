@@ -1,3 +1,8 @@
+## 戻る
+https://github.com/tabiojisann/service/tree/master/thinking
+
+
+
 ## このディレクトリではプロジェクトをいくつか分けてます
 
 **・laravelディレクトリは学習用**
@@ -8,3 +13,4 @@
 
 
 ### お送りしたURLはthinkingディレクトリのものです。。
+
