@@ -1,4 +1,7 @@
-# ジャンル別大喜利サイト
+# ジャンル別大喜利サイト [THINKINGーPLATFORM]
+
+
+
 |笑い|恋愛|ビジネス|
 |---|---|---|
 |![Image from Gyazo](https://i.gyazo.com/061fc926b0072ad2bdb9251ba27cb4c0.png)|![Image from Gyazo](https://i.gyazo.com/bd39438e6a057af56a53369119ba6140.png)|![Image from Gyazo](https://i.gyazo.com/e9af3f4eba5ed870fdf819c699469f50.png)
