@@ -7,4 +7,4 @@
 
 
 ## ER
-[https://drive.google.com/file/d/11Da3mYNB2-J8574DiY-J9yANWKDw3R18/view?usp=sharing](url)
+[[![Screenshot from Gyazo](https://gyazo.com/625ab5fe4f9de34f5cb6ef3e5f4662a2/raw)](https://gyazo.com/625ab5fe4f9de34f5cb6ef3e5f4662a2)](url)
