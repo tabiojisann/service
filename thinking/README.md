@@ -60,7 +60,7 @@ https://github.com/tabiojisann/service/issues/28
 
 
 ## ER図
-![Image from Gyazo](https://i.gyazo.com/d64604ba58fa757af934e22f0fa32e1f.png)
+![Image from Gyazo](https://i.gyazo.com/0b2416aee92471d1bde2a83206b53716.png)
 
 ## 発信
 
