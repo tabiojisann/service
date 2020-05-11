@@ -12,6 +12,7 @@ class Theme extends Model
     protected $fillable = [
         'body',
         'image',
+        
     ];
 
     public function user(): BelongsTo

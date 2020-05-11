@@ -7,7 +7,11 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Answer extends Model
 {
-    protected $fillable =['body'];
+    protected $fillable =[
+        'body', 
+        'theme_id', 
+        'user_id'
+    ];
 
     public function theme(): BelongsTo
     {

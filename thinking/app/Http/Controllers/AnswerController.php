@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Theme;
 use App\Answer;
+use App\User;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\AnswerRequest;
@@ -12,26 +13,21 @@ use App\Http\Requests\ThemeRequest;
 class AnswerController extends Controller
 {
 
-  public function create(Request $request, Theme $theme, Answer $answer)
-  {
-
-  
   
 
-
-
-
-      return view('answers.create', ['theme' => $theme, 'answer' => $answer]);    
-  }
-
-
-
-  public function store(AnswerRequest $request, Answer $answer)
+  public function store(AnswerRequest $request, Answer $answer, Theme $theme, User $user)
   {
+    
+
       $answer->fill($request->all());
-
-      $answer->user_id = $request->user()->id;
+      // $theme->answers()->save($answer);
       $answer->save();
-      return redirect()->route('themes.show');
+      
+      return redirect('/');
+  
   }
+
 }
+
+
+ 
