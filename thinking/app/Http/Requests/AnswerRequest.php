@@ -26,7 +26,6 @@ class AnswerRequest extends FormRequest
         return [
             'body' => 'required|max:100',
         ];
-
        
     }
 

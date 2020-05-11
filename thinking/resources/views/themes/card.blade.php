@@ -67,11 +67,11 @@
             <i class="fas fa-ellipsis-v"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="{{ route('themes.show', ['theme' => $theme]) }}">
+            <a class="dropdown-item" href="{{ route('themes.show', $theme) }}">
               <i class="fas fa-list mr-2"></i>回答一覧
             </a>
           </div>
-       
+        
         </div>
     </div> 
     @endif   

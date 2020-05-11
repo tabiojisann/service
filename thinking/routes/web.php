@@ -31,7 +31,7 @@ Route::resource('/themes', 'ThemeController')->only(['show']);
 
 // Route::resource('/{themes}/answers', 'AnswerController')->except('index', 'show' ,'edit' ,'update')->middleware('auth');
 Route::resource('/{themes}/answers', 'AnswerController', [
-    'only' => ['create', 'store', 'destroy']
+    'only' => ['store', 'destroy']
 ])->middleware('auth');
 
 

@@ -40,10 +40,7 @@ class ThemeController extends Controller
     public function store(ThemeRequest $request, Theme $theme) 
     {
         
-
         $theme->fill($request->all());
-      
-        
       
         if (isset($theme->image)) {
             $file_name = $request->image->getClientOriginalName();
@@ -72,7 +69,10 @@ class ThemeController extends Controller
             $file_name = $request->image->getClientOriginalName();
             $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
         }
+
+
         
+
         
         $theme->save();
         return redirect()->route('themes.index');
@@ -87,15 +87,15 @@ class ThemeController extends Controller
 
     public function show(Theme $theme, Answer $answer, User $user)
     {
-
-       
         // $answers = Answer::where($theme)->orderBy('created_at', 'desc');
         $answers = Answer::all()->sortByDesc('created_at');
-      
-         
-
-        return view('themes.show', ['theme' => $theme, 'answers' => $answers]);
+        return  view('themes.show', 
+                    ['theme' => $theme, 
+                    'answers' => $answers, 
+                    'user' => $user]);
+            
     }
 
+    
     
 }
