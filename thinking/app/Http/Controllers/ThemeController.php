@@ -69,6 +69,10 @@ class ThemeController extends Controller
             $file_name = $request->image->getClientOriginalName();
             $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
         }
+
+
+        
+
         
         $theme->save();
         return redirect()->route('themes.index');

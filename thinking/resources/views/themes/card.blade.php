@@ -81,9 +81,9 @@
 
   <div class="card-body pt-0 ">
     <div class="card-text mx-auto" style="width: 100%;">
-      <h1 class="font-weight-bold" style="color: black;">
+      <h3 class="font-weight-bold" style="color: black;">
       {!! nl2br(e($theme->body)) !!}
-      </h1>
+      </h3>
     </div>
   </div>
 
