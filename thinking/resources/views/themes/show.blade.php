@@ -13,9 +13,6 @@
         <img src ="{{ str_replace('public/', '/storage/', $theme->image) }}" style="height: 100%; width: 100%;">
       </div>
     @endisset
-
-
-   
   
     <!-- 投稿者本人と未ログインユーザーがコメントできないように -->
 

@@ -17,12 +17,8 @@ class AnswerController extends Controller
 
   public function store(AnswerRequest $request, Answer $answer, Theme $theme, User $user)
   {
-    
-
       $answer->fill($request->all());
-      // $theme->answers()->save($answer);
       $answer->save();
-      
       return redirect('/');
   
   }
