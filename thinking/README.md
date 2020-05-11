@@ -49,7 +49,7 @@ https://github.com/tabiojisann/service/issues/28
 
 - MySQL 5.7
 
-- Vue.js 2.6
+- Vue.js 2.6.11
 
 #### その他
 
