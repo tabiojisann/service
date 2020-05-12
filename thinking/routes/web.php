@@ -34,7 +34,7 @@ Route::prefix('answers')->name('answers.')->group(function () {
   Route::delete('/{answer}/like', 'AnswerController@unlike')->name('unlike')->middleware('auth');
 });
 
-// Route::resource('/{themes}/answers', 'AnswerController')->except('index', 'show' ,'edit' ,'update')->middleware('auth');
+
 Route::resource('/{themes}/answers', 'AnswerController', [
     'only' => ['store', 'destroy']
 ])->middleware('auth');

@@ -47,13 +47,14 @@
               <div class="mt-0">
                 <a href="{{ route('register') }}" class="card-text">ユーザー登録はこちら</a>
               </div>
-
             </div>
+            <h4 style="margin-top: 30px;">こちらからログインできます</h4><br>
+            <p> メールアドレス: aaa@gmail.com</p>
+            <p> パスワード: aaaaaaaa</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-
 
 @endsection
