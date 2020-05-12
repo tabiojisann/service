@@ -25,7 +25,8 @@ class ThemeRequest extends FormRequest
     {
         return [
             'body' => 'required|max:150',
-            'image' => 'max:2000'
+            'image' => 'max:2000',
+            'tags' => 'json|regex:/^(?!.*\s).+$/u|regex:/^(?!.*\/).*$/u',
         ];
     }
 
@@ -33,7 +34,19 @@ class ThemeRequest extends FormRequest
     {
         return [
             'body' => '本文',
-            'image' => '画像'
+            'image' => '画像',
+            'tags' => 'タグ',
         ];
     }
+
+    public function passedValidation()
+    {
+        $this->tags = collect(json_decode($this->tags))
+            ->slice(0, 3)
+            ->map(function ($requestTag) {
+                return $requestTag->text;
+            });
+    }
 }
+
+

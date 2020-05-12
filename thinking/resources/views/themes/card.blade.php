@@ -1,8 +1,8 @@
 
-  <div class="card-body d-flex flex-row">
+<div class="card-body d-flex flex-row">
   
   @if( Auth::id() === $theme->user_id )
-    <i class="fab fa-phoenix-framework fa-2x mr-1"></i>
+    <i class="fab fa-phoenix-framework fa-2x mr-1 red-text"></i>
   @elseif( Auth::id() !== $theme->user_id )
     <i class="far fa-grin-squint-tears fa-2x mr-1"></i>
   @endif
@@ -86,4 +86,27 @@
       </h3>
     </div>
   </div>
+
+  <div class="card-body pt-0 pb-2 pl-3">
+    <div class="card-text">
+      <answer-like>
+      </answer-like>
+    </div>
+  </div>
+  @foreach($theme->tags as $tag)
+    @if($loop->first)
+      <div class="card-body pt-0 pb-4 pl-3">
+        <div class="card-text line-height">
+    @endif
+          <a href="{{ route('tags.show', ['name' => $tag->name]) }}" class="border p-1 mr-1 mt-1 text-muted">
+            {{ $tag->hashtag }}
+          </a>
+    @if($loop->last)
+        </div>
+      </div>
+    @endif
+  @endforeach
+  
+
+
 
