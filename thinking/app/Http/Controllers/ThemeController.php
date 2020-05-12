@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use \App\Theme;
 use \App\User;
-
 use \App\Answer;
+use App\Tag;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -26,39 +26,65 @@ class ThemeController extends Controller
         $themes = Theme::all()->sortByDesc('created_at');
       
         // dd($themes);
-        
-
-
+    
         return view('themes.index', ['themes' => $themes]);
         }
 
         public function create()
     {
-        return view('themes.create');    
+        $allTagNames = Tag::all()->map(function ($tag) {
+            return ['text' => $tag->name];
+        });
+ 
+        return view('themes.create', [
+            'allTagNames' => $allTagNames,
+        ]);    
     }
 
     public function store(ThemeRequest $request, Theme $theme) 
     {
         
         $theme->fill($request->all());
+        
       
         if (isset($theme->image)) {
             $file_name = $request->image->getClientOriginalName();
             $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
           }
-           
+
         $theme->user_id = $request->user()->id;
         $theme->save();
+
+        $request->tags->each(function ($tagName) use ($theme) {
+            $tag = Tag::firstOrCreate(['name' => $tagName]);
+            $theme->tags()->attach($tag);
+        });
+
         return redirect()->route('themes.index'); 
             
     } 
+
+    
 
        
     
 
     public function edit(Theme $theme)
     {
-        return view('themes.edit', ['theme' => $theme]);    
+
+        $tagNames = $theme->tags->map(function ($tag) {
+            return ['text' => $tag->name];
+        });
+
+        $allTagNames = Tag::all()->map(function ($tag) {
+            return ['text' => $tag->name];
+        });
+
+        return view('themes.edit', [
+            'theme' => $theme,
+            'tagNames' => $tagNames,
+            'allTagNames' => $allTagNames,
+        ]);
     }
 
     public function update(ThemeRequest $request, Theme $theme)
@@ -70,9 +96,11 @@ class ThemeController extends Controller
             $theme->image = $request->image->storeAs('public/theme_images', isset($time).'_' .Auth::user()->id . $file_name);
         }
 
-
-        
-
+        $theme->tags()->detach();
+        $request->tags->each(function ($tagName) use ($theme) {
+            $tag = Tag::firstOrCreate(['name' => $tagName]);
+            $theme->tags()->attach($tag);
+        });
         
         $theme->save();
         return redirect()->route('themes.index');
@@ -96,6 +124,4 @@ class ThemeController extends Controller
             
     }
 
-    
-    
 }

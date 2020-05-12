@@ -15,10 +15,7 @@
     @endisset
   
     <!-- 投稿者本人と未ログインユーザーがコメントできないように -->
-
     @if( Auth::id() !== $theme->user_id )
-   
-   
     <form method="POST" action="{{ route('answers.store', $theme) }}">
       @csrf
         <div class="form-group">
@@ -47,6 +44,7 @@
 
     </div>
   </div>
+ 
   @endforeach
 </div>
   

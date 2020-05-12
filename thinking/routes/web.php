@@ -34,6 +34,8 @@ Route::resource('/{themes}/answers', 'AnswerController', [
     'only' => ['store', 'destroy']
 ])->middleware('auth');
 
+Route::get('/tags/{name}', 'TagController@show')->name('tags.show');
+
 
 
 
