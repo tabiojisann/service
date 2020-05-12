@@ -1,30 +1,31 @@
-<nav class="navbar navbar-expand navbar-dark blue-gradient">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>Top</a>
+<nav class="navbar navbar-expand navbar-dark aqua-gradient sticky-top scrolling-navbar">
+
+  <a class="navbar-brand" href="/"><i class="fas fa-2x fa-arrow-left mr-1"></i></a>
 
   <ul class="navbar-nav ml-auto">
 
     @guest 
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('register') }}">ユーザー登録</a>
+      <a class="nav-link" style="font-size: 18px;" href="{{ route('register') }}">ユーザー登録</a>
     </li>
     @endguest 
 
     @guest 
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+      <a class="nav-link" style="font-size: 18px;" href="{{ route('login') }}">ログイン</a>
     </li>
     @endguest 
 
     @auth 
     <li class="nav-item mx-auto" style="width: 400px;">
-      <a class="nav-link" style="font-size: 19px;" href="/">{{ Auth::user()->name }}</a>
+      <a class="nav-link" style="font-size: 30px;" href="/">{{ Auth::user()->name }}</a>
     </li>
     @endauth 
       
     @auth 
     <li class="nav-item">
-      <a class="nav-link" href="{{ route('themes.create') }}"><i class="fas fa-pen mr-1"></i>お題を出す</a>
+      <a class="nav-link" href="{{ route('themes.create') }}"><i class="fab fa-2x fa-medapps mr-1" style="color: yellow;"></i>お題を出す</a>
     </li>
     @endauth 
 
@@ -35,9 +36,9 @@
     @auth
     <!-- Dropdown -->
     <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+      <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
          aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-user-circle"></i>
+        <i class="fas fa-2x fa-user-circle"></i>
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
         <button class="dropdown-item" type="button"

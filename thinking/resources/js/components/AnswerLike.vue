@@ -4,10 +4,22 @@
       type="button"
       class="btn m-0 p-1 shadow-none"
     >
-      <i class="fas fa-heart mr-1"
+      <!-- <i class="fas fa-heart mr-1"
          :class="{'red-text':this.isLikedBy, 'animated heartBeat fast':this.gotToLike}"
           @click="clickLike" 
+      /> -->
+
+      <!-- <i class="fas fa-3x fa-sign-language mr-1 "
+        :class="{'pink-text' :this.isLikedBy, 'animated headShake fast':this.gotToLike}"
+        @click="clickLike"
+      /> -->
+
+      <i class="far fa-2x fa-lightbulb"
+        :class="{'yellow-text' :this.isLikedBy, 'animated flash infinite':this.gotToLike}"
+        @click="clickLike"
       />
+ 
+   
     </button>
       {{ countLikes }}
   </div>

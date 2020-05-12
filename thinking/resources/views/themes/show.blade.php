@@ -3,6 +3,7 @@
 @section('title', '記事詳細')
 
 @section('content')
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/19/16/44/question-2519654_1280.png'); background-attachment: fixed; background-position: center center;">
   @include('nav')
   <div class="card mt-5 w-50 mx-auto" style="width: 200px;">
     @include('themes.card')
@@ -10,22 +11,26 @@
     <!-- 画像データが入力されてたら表示する。なかったらしない -->
     @isset($theme->image)
       <div class="card-image pt-0">
-        <img src ="{{ str_replace('public/', '/storage/', $theme->image) }}" style="height: 100%; width: 100%;">
+        <img  src ="{{ str_replace('public/', '/storage/', $theme->image) }}" style="height: 100%; width: 100%;">
       </div>
     @endisset
   
     <!-- 投稿者本人と未ログインユーザーがコメントできないように -->
     @if( Auth::id() !== $theme->user_id )
-    <form method="POST" action="{{ route('answers.store', $theme) }}">
-      @csrf
-        <div class="form-group">
-          <textarea name="body" required class="form-control" rows="2" placeholder="面白い回答待ってます"></textarea>
-          <input type="hidden" name="user_id" value="{{ Auth::id() }}">
-          <input type="hidden" name="theme_id" value="{{ $theme->id }}">
-          <input type="hidden" name="theme" value="{{ $theme }}">
-        </div>    
-        <button type="submit" class="btn btn-success">回答</button>
-    </form>
+      <div class="card-footer text-center">
+        <form method="POST" action="{{ route('answers.store', $theme) }}">
+          @csrf
+
+            <div class="form-group">
+              <textarea name="body" required class="form-control" rows="2" placeholder="面白い回答待ってます"></textarea>
+              <input type="hidden" name="user_id" value="{{ Auth::id() }}">
+              <input type="hidden" name="theme_id" value="{{ $theme->id }}">
+              <input type="hidden" name="theme" value="{{ $theme }}">
+            </div>    
+            <button type="submit" class="btn peach-gradient">回答</button>
+          
+        </form>
+      </div>
     @endif
   </div>
   
@@ -56,6 +61,7 @@
     </div>
 
   @endforeach
+</div>
 </div>
   
 @endsection
