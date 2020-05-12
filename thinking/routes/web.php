@@ -29,6 +29,11 @@ Route::get('/', 'ThemeController@index')->name('themes.index');
 Route::resource('/themes', 'ThemeController')->except('index', 'show')->middleware('auth');
 Route::resource('/themes', 'ThemeController')->only(['show']);
 
+Route::prefix('answers')->name('answers.')->group(function () {
+  Route::put('/{answer}/like', 'AnswerController@like')->name('like')->middleware('auth');
+  Route::delete('/{answer}/like', 'AnswerController@unlike')->name('unlike')->middleware('auth');
+});
+
 // Route::resource('/{themes}/answers', 'AnswerController')->except('index', 'show' ,'edit' ,'update')->middleware('auth');
 Route::resource('/{themes}/answers', 'AnswerController', [
     'only' => ['store', 'destroy']

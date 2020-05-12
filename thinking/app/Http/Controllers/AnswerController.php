@@ -20,8 +20,28 @@ class AnswerController extends Controller
       $answer->fill($request->all());
       $answer->save();
       return redirect('/');
-  
   }
+
+  public function like(Request $request, Answer $answer)
+    {
+        $answer->likes()->detach($request->user()->id);
+        $answer->likes()->attach($request->user()->id);
+
+        return [
+            'id' => $answer->id,
+            'countLikes' => $answer->count_likes,
+        ];
+    }
+
+    public function unlike(Request $request, Answer $answer)
+    {
+        $answer->likes()->detach($request->user()->id);
+
+        return [
+            'id' => $answer->id,
+            'countLikes' => $answer->count_likes,
+        ];
+    }
 
 }
 
