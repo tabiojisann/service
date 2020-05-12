@@ -87,12 +87,6 @@
     </div>
   </div>
 
-  <div class="card-body pt-0 pb-2 pl-3">
-    <div class="card-text">
-      <answer-like>
-      </answer-like>
-    </div>
-  </div>
   @foreach($theme->tags as $tag)
     @if($loop->first)
       <div class="card-body pt-0 pb-4 pl-3">
