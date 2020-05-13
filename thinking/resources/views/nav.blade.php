@@ -19,7 +19,7 @@
 
     @auth 
     <li class="nav-item mx-auto" style="width: 400px;">
-      <a class="nav-link" style="font-size: 30px;" href="/">{{ Auth::user()->name }}</a>
+      <a class="nav-link" href="{{ route('users.show', ['name' => Auth::user()->name]) }}" style="font-size: 30px;" href="/">{{ Auth::user()->name }}</a>
     </li>
     @endauth 
       
@@ -42,7 +42,7 @@
       </a>
       <div class="dropdown-menu dropdown-menu-right dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
         <button class="dropdown-item" type="button"
-                onclick="location.href=''">
+                onclick="location.href='{{ route('users.show', ['name' => Auth::user()->name]) }}'">
           マイページ
         </button>
         <div class="dropdown-divider"></div>

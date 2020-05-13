@@ -2,9 +2,13 @@
 <div class="card-body d-flex flex-row">
   
   @if( Auth::id() === $theme->user_id )
+  <a href="{{ route('users.show', ['name' => $theme->user->name]) }}" class="text-dark">
     <i class="fab fa-phoenix-framework fa-2x mr-1 red-text"></i>
+  </a>
   @elseif( Auth::id() !== $theme->user_id )
+  <a href="{{ route('users.show', ['name' => $theme->user->name]) }}" class="text-dark">
     <i class="far fa-grin-squint-tears fa-2x mr-1"></i>
+  </a>
   @endif
     <div>
       <div class="font-weight-bold">{{ $theme->user->name }}</div>
