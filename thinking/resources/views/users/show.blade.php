@@ -3,6 +3,7 @@
 @section('title', $user->name)
 
 @section('content')
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2016/11/30/12/16/question-mark-1872665_1280.jpg'); background-attachment: fixed; background-position: center center; height: 100%;">
   @include('nav')
   <div class="container">
     @include('users.user')
@@ -18,4 +19,5 @@
         </div>
       @endforeach
     </div>
+</div>
 @endsection

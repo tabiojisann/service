@@ -47,8 +47,9 @@
               
             </div>
             <h4 style="margin-top: 30px;">こちらからログインできます</h4><br>
-            <p> メールアドレス: aaa@gmail.com</p>
-            <p> パスワード: aaaaaaaa</p>
+            <p> メールアドレス: testuser@example.com</p>
+            <p> パスワード: testuser4649</p>
+            <p> ユーザー名: テストユーザー</p>
           </div>
         </div>
       </div>
