@@ -3,7 +3,7 @@
 @section('title', '記事詳細')
 
 @section('content')
-<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2017/07/19/16/44/question-2519654_1280.png'); background-attachment: fixed; background-position: center center;">
+<div class="view" style="background-image: url('https://cdn.pixabay.com/photo/2017/01/26/08/07/light-bulb-2010022_1280.jpg'); background-attachment: fixed; background-position: center center;">
   @include('nav')
   <div class="card mt-5 w-50 mx-auto" style="width: 200px;">
     @include('themes.card')
