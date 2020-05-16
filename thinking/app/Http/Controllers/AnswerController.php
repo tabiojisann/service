@@ -22,6 +22,12 @@ class AnswerController extends Controller
       return redirect('/');
   }
 
+  public function destroy(Answer $answer)
+  {
+      $answer->delete();
+      return redirect('/');
+  }
+
   public function like(Request $request, Answer $answer)
     {
         $answer->likes()->detach($request->user()->id);

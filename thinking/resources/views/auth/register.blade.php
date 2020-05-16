@@ -46,10 +46,10 @@
               </div>
               
             </div>
-            <h4 style="margin-top: 30px;">こちらからログインできます</h4><br>
+            <!-- <h4 style="margin-top: 30px;">こちらからログインできます</h4><br>
             <p> メールアドレス: testuser@example.com</p>
             <p> パスワード: testuser4649</p>
-            <p> ユーザー名: テストユーザー</p>
+            <p> ユーザー名: テストユーザー</p> -->
           </div>
         </div>
       </div>

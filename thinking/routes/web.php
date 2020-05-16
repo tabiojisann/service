@@ -46,7 +46,7 @@ Route::resource('/themes', 'ThemeController')->except('index', 'show')->middlewa
 Route::resource('/themes', 'ThemeController')->only(['show']);
 
 // ----回答----
-Route::resource('/{themes}/answers', 'AnswerController', [
+Route::resource('/themes/answers', 'AnswerController', [
   'only' => ['store', 'destroy']
 ])->middleware('auth');
 

@@ -117,10 +117,12 @@ class ThemeController extends Controller
     {
         // $answers = Answer::where($theme)->orderBy('created_at', 'desc');
         $answers = Answer::all()->sortByDesc('created_at');
+     
         return  view('themes.show', 
                     ['theme' => $theme, 
                     'answers' => $answers, 
                     'user' => $user]);
+      
             
     }
 

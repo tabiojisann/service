@@ -18,7 +18,7 @@
     @endguest 
 
     @auth 
-    <li class="nav-item mx-auto" style="width: 400px;">
+    <li class="nav-item mx-auto" style="width: 600px;">
       <a class="nav-link" href="{{ route('users.show', ['name' => Auth::user()->name]) }}" style="font-size: 30px;" href="/">{{ Auth::user()->name }}</a>
     </li>
     @endauth 
