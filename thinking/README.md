@@ -14,9 +14,9 @@
 |![Image from Gyazo](https://i.gyazo.com/7e72375764f0355313cb8239dabd7490.png)|![Image from Gyazo](https://i.gyazo.com/f712449cb419f8c938d3f65a807b5468.jpg)|![Image from Gyazo](https://i.gyazo.com/b6ef1905e553b8afff51ff81cff37d8a.png)|
 
 ## 使用風景
-概要を短い動画にまとめました
+⬇️⬇️概要を短い動画にまとめました⬇️⬇️
 
-[![https://i9.ytimg.com/vi/n6KcFY_Rd_c/mq2.jpg?sqp=CJKlg_YF&rs=AOn4CLAqig4njyqdhHJurUkf1fXuYCQ2Tg](http://img.youtube.com/vi/n6KcFY_Rd_c/0.jpg)](http://www.youtube.com/watch?v=n6KcFY_Rd_c "THINKING=PLATFORM")
+https://youtu.be/n6KcFY_Rd_c
 
 ## なぜ作ったのか？
 
