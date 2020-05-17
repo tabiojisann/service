@@ -16,7 +16,7 @@
 ## 使用風景
 概要を短い動画にまとめました
 
-http://img.youtube.com/vi/n6KcFY_Rd_c/default.jpg
+[![http://img.youtube.com/vi/n6KcFY_Rd_c/default.jpg](http://img.youtube.com/vi/n6KcFY_Rd_c/0.jpg)](http://www.youtube.com/watch?v=n6KcFY_Rd_c "THINKING-PLATFORM")
 
 ## なぜ作ったのか？
 
