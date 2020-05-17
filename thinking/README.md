@@ -13,6 +13,10 @@
 |---|---|---|
 |![Image from Gyazo](https://i.gyazo.com/7e72375764f0355313cb8239dabd7490.png)|![Image from Gyazo](https://i.gyazo.com/f712449cb419f8c938d3f65a807b5468.jpg)|![Image from Gyazo](https://i.gyazo.com/b6ef1905e553b8afff51ff81cff37d8a.png)|
 
+## 使用風景
+概要を短い動画にまとめました
+https://www.youtube.com/watch?v=n6KcFY_Rd_c&t=23s
+
 ## なぜ作ったのか？
 
 - 大喜利系のアプリは多数存在するが、笑いやエンタメ色が強く、***カテゴライズが限定的***だと感じたこと
@@ -68,7 +72,4 @@ https://qiita.com/tabiojisann
 
 https://note.com/takumi_ojisan
 
-## 芸人時代のネタ動画
-
-https://www.youtube.com/watch?v=zE5FQJQIhL0&t=12s
 
