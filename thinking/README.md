@@ -11,7 +11,7 @@
 
 |笑い|恋愛|ビジネス|
 |---|---|---|
-|![Image from Gyazo](https://i.gyazo.com/061fc926b0072ad2bdb9251ba27cb4c0.png)|![Image from Gyazo](https://i.gyazo.com/bd39438e6a057af56a53369119ba6140.png)|![Image from Gyazo](https://i.gyazo.com/e9af3f4eba5ed870fdf819c699469f50.png)
+|![Image from Gyazo](https://i.gyazo.com/7cffd08740f1ce632a1ebd1476ed718f.gif)|![Image from Gyazo](https://i.gyazo.com/c31519cbd0449489b286e979c9c38017.gif)|![Image from Gyazo](https://i.gyazo.com/e9af3f4eba5ed870fdf819c699469f50.png)
 
 ## なぜ作ったのか？
 
