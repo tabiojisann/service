@@ -16,7 +16,7 @@
 ## 使用風景
 概要を短い動画にまとめました
 
-https://www.youtube.com/watch?v=n6KcFY_Rd_c&t=23s
+http://img.youtube.com/vi/n6KcFY_Rd_c/default.jpg
 
 ## なぜ作ったのか？
 
