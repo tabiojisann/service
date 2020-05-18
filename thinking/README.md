@@ -59,6 +59,8 @@ https://github.com/tabiojisann/service/issues/28
 
 #### その他
 
+- linux
+
 - Socialite
 
 - laradock
