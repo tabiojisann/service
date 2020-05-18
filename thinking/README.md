@@ -56,11 +56,14 @@ https://github.com/tabiojisann/service/issues/28
 
 - Vue.js 2.6.11
 
+
 #### その他
 
 - Socialite
 
 - laradock
+
+- Apache 2.4.41
 
 
 
