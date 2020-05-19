@@ -16,7 +16,7 @@
 # ⬇︎⬇︎概要⬇︎⬇︎
 短い動画にまとめました
 
-https://youtu.be/n6KcFY_Rd_c
+https://www.youtube.com/watch?v=FW7WtLqD2Ow&t=66s
 
 ## なぜ作ったのか？
 
