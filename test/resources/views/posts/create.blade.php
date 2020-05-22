@@ -4,6 +4,10 @@
 
 
 
+
+
+
+
 @foreach($posts as $post)<br>
   <p>タイトル：{{ $post->title }}</p>
   <p>ユーザーID:{{ $post->user_id }}</p>
@@ -33,4 +37,6 @@
            </div>
        </div>
 </form>
+
+
 @endsection
